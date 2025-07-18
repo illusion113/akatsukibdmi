@@ -12,9 +12,7 @@
   justify-content: end;
   
 }
-.navi a:hover {
-  animation: select 0.3s forwards;
-}
+
 a{text-decoration: none;}
 
 .navi {
@@ -65,6 +63,8 @@ body {
   margin: 0px;
   padding: 0%;
 }
+.image{overflow: hidden;}
+.image img:hover{animation: zoom 0.8 ease-in forwards;}
 .hero h3 {
   font-size: 3vw;
   color: rgb(255, 255, 255);
@@ -76,6 +76,59 @@ body {
   font-size: 2vw;
   background-color: rgb(255, 255, 255);
   margin: 40px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product {
+  width: 250px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.extra {
+  display: none;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle:checked ~ .extra {
+  display: flex;
+}
+
+.view-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #333;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.view-btn:hover {
+  animation: select 0.5s forwards duration timing-function delay iteration-count direction fill-mode;
 }
 .hero button, a {
   color: rgb(5, 5, 5);
@@ -89,18 +142,51 @@ body {
 }
 .products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2vw;
 }
+.productsd {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2vw;
+}
+#pp img{ max-width: 40vw;
+max-height: 40vw; overflow: hidden;}
 .products p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: azure;
   font-size: 2vw;
+
 }
-#bottle {
+.service3 img{max-width: 40vw;
+max-height: 40vw; overflow: hidden;}
+#pp {
   overflow: hidden;
   width: 100%;
   display: flex;
+}
+.view {
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  max-width: 300px;
+  border-radius: 8px; 
+}
+.view a{  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw;
+}
+.view:hover{animation:select 0.5s forwards;}
+@keyframes select{
+    from{border-radius: 0%;
+    background-color: aliceblue;}
+    to{border-radius: 20px;
+    background-color:rgb(255, 166, 0) ;
+color: white;}
 }
 img {
   width: 100%;
