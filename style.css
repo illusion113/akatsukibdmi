@@ -1,0 +1,180 @@
+.navi li {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  color: azure;
+}
+.navi li a {
+  color: rgb(255, 255, 255);
+  text-align: right;
+  margin: 10px;
+  text-decoration: none;
+  justify-content: end;
+  
+}
+.navi a:hover {
+  animation: select 0.3s forwards;
+}
+a{text-decoration: none;}
+
+.navi {
+  background-color: rgb(0, 1, 40);
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: oblique;
+  align-items: center;
+  z-index: 999;
+  display: flex;
+  color: azure;
+}
+.navi img {
+  object-fit: contain;
+  width: 100px;
+  min-height: 100px;
+  margin-right: auto;
+}
+body {
+  margin: 0px;
+  padding: 0%;
+  background-color:rgb(0, 0, 0);
+}
+.hero {
+      background-image: url(pictures/gray-geometric-shapes-wireframe-wave-background-vector/v882-kul-55.jpg);
+  margin: 0%;
+  padding: 0%;
+  image-rendering: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 1000px;
+  background-position: center;
+  height: 100vh;
+  border-top: 5px solid rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.explore h1{color: white;}
+.hero h1 {
+  font-size: 9vw;
+  animation:pulse 0.5s;
+  animation-iteration-count: 3;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0%;
+}
+.hero h3 {
+  font-size: 3vw;
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  padding: 0%;
+}
+.hero button {
+  border-radius: 10px;
+  font-size: 2vw;
+  background-color: rgb(255, 255, 255);
+  margin: 40px;
+}
+.hero button, a {
+  color: rgb(5, 5, 5);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.explore h1 {
+  font-size: 7vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2px;
+}
+.products p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: azure;
+  font-size: 2vw;
+}
+#bottle {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0%;
+}
+.navi a {
+  background-image: linear-gradient(to right, white, azure);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+.navi a:hover {
+  background-size: 100% 2px;
+}
+.products img:hover {
+  animation: zoom 0.3s ease forwards;
+}
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(75, 45, 0);
+  font-size: 2vw;
+  margin: 10px;
+}
+.h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(78, 49, 7);
+  font-size: 8vw;
+}
+.about h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(47, 34, 16);
+  font-size: 4vw;
+}
+.about {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  display: grid;
+}
+div, h1 {
+  animation: animated 0.5s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 1% cover 25%;
+}
+.image {
+  background-color: rgb(255, 243, 197);
+  overflow: hidden;
+  padding: 10px;
+}
+@keyframes animated {
+  from { transform: translateX(-100px); opacity: 0.1; scale: 0.99; }
+  to { transform: translateX(0px); opacity: 1; scale: 1; }
+}
+.footer {
+  background-color: rgba(27, 27, 27, 0.97);
+  color: antiquewhite;
+  column-count: 4;
+}
+.footer p {
+  color: aliceblue;
+  font-size: 20px;
+  padding: 10px;
+}
+@media(max-width:600px) {
+  .about { grid-template-columns: repeat(1, 1fr); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+@keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes grow { from { transform: scale(0.8); opacity: 0.5; } to { transform: scale(1); opacity: 1; } }
+@keyframes rotateIn { from { transform: rotate(-90deg); opacity: 0; } to { transform: rotate(0); opacity: 1; } }
